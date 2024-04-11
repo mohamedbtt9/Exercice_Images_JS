@@ -1,23 +1,26 @@
 <html>
-    <head>
-        <title>Exercice image JS</title>
-        <meta charset="UTF-8">
-        <script>
-    function afficher(){
-    if(document.getElementById('coche1').checked){
-        document.getElementById("first").style.display="Block";
-    }
-    else{
-        document.getElementById("first").style.display="None";
-    }
+<head>
+<meta charset="UTF-8"/>
+<style>img{padding-top:1%;}</style>
+<script>
+function fct(){
+var Result="";
+    for(i=1;i<4;i++){
+    if(document.getElementById('choix'+i).checked){
+Result = Result+'<img width="150px" src="Image'+i+'.jpg"/><br/>';
         }
+    }
+document.getElementById('zone1').innerHTML = Result;    
+}
 
-    </script>
-    </head>
-    <body>
-        <h1>Image(s) a afficher ?</h1>
-        <P><input type="checkbox" id="coche1" >Image 1</p>
-        <button onclick="afficher()" >Afficher</button> <br>
-        <p><img style="width:100px; display:None" id="first" src="Image1.jpg"/></p>
-    </body>
+</script>
+</head>
+<body>
+<h3>Image(s) à afficher ?</h3><p>
+<input type="checkbox" id="choix1"/>Image 1<br/>
+<input type="checkbox" id="choix2"/>Image 2<br/>
+<input type="checkbox" id="choix3"/>Image 3<br/></p>
+<button onclick="fct()">Afficher</button>
+<div id="zone1"></div>
+</body>
 </html>
