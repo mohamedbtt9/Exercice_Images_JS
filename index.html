@@ -1,38 +1,23 @@
 <html>
-<head>
-<script>
-function affichage(){
-	alert("Tout es OK !");
-}
-function cacher(){
-	document.getElementById('DuTexte').style.display="None";
-}
-function presenter(){
-	document.getElementById('DuTexte').style.display="Block";
-}
+    <head>
+        <title>Exercice image JS</title>
+        <meta charset="UTF-8">
+        <script>
+    function afficher(){
+    if(document.getElementById('coche1').checked){
+        document.getElementById("first").style.display="Block";
+    }
+    else{
+        document.getElementById("first").style.display="None";
+    }
+        }
 
-function controler(){
-	if(document.getElementById('Control').checked){
-			alert("Bouton option coché");
-		}
-	else{alert("Bouton option NON coché");}		
-}
-
-</script>
-</head>
-<body>
-<h1>Mes outils</h1>
-<hr/>
-<h2>Boite de dialogue</h2>
-<button onclick="affichage()">Afficher</button>
-<hr/>
-<p id="DuTexte">Ma phrase de texte</p>
-<button onclick="presenter()">Presenter</button>
-<button onclick="cacher()">Cacher</button>
-<hr/>
-<p>Option<input type="checkbox" id="Control"></p>
-<button onclick="controler()">Check</button>
-
-
-</body>
+    </script>
+    </head>
+    <body>
+        <h1>Image(s) a afficher ?</h1>
+        <P><input type="checkbox" id="coche1" >Image 1</p>
+        <button onclick="afficher()" >Afficher</button> <br>
+        <p><img style="width:100px; display:None" id="first" src="Image1.jpg"/></p>
+    </body>
 </html>
